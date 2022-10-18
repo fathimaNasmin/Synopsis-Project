@@ -48,4 +48,20 @@ body{
 }
 #dropdownMenu2 {
     min-width: 100%;
+    text-align: left;
+}
+.dropdown-menu{
+    width:100%;
+}
+.dropdown-toggle {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    position: absolute;
+    right: 20px;
+    bottom: 45%;
+}
+.btn{
+    background-color:#002B5B;
 }
