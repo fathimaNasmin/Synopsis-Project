@@ -65,6 +65,13 @@ body{
 .btn{
     background-color:#395B64;
 }
+input.calendar{
+    background-image: url(/images/calendar-days-solid.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 20px;  
+    background-origin: content-box; 
+}
 /* footer */
 .footer{
     background-color: #395B64;
