@@ -1,3 +1,2 @@
 
-$('#datepicker').datepicker();
 
