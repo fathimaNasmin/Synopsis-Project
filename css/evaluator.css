@@ -1,0 +1,100 @@
+body {
+    font-family: Times New Roman;
+}
+
+/* header */
+.header {
+    background-color: #AC7088;
+    padding: 20px;
+}
+
+.logo-div {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+#id {
+    height: auto;
+    width: 100px;
+}
+
+.title {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#title-name {
+    font-size: 25px;
+}
+
+/* < !-- student login form --> */
+.login-section {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.login-form {
+    border: 1px solid#AC7088;
+    width: 40%;
+}
+
+#student-login {
+    color: white;
+    background-color: #AC7088;
+    font-size: 25px;
+    text-align: center;
+}
+
+#form-section {
+    padding: 20px 70px;
+    font-family: helvetica neue;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#dropdownMenu2 {
+    min-width: 100%;
+    text-align: left;
+}
+
+.dropdown-menu {
+    width: 100%;
+}
+
+.dropdown-toggle {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    position: absolute;
+    right: 20px;
+    bottom: 45%;
+}
+
+.btn {
+    background-color: #AC7088;
+}
+
+input.calendar {
+    background-image: url(/images/calendar-days-solid.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 20px;
+    background-origin: content-box;
+}
+
+/* footer */
+.footer {
+    background-color: #AC7088;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+}
