@@ -1,0 +1,81 @@
+body {
+    font-family: Times New Roman;
+}
+
+/* header */
+.header {
+    background-color: #594545;
+    padding: 20px;
+}
+
+.logo-div {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+#id {
+    height: auto;
+    width: 100px;
+}
+
+.title {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#title-name {
+    font-size: 25px;
+}
+/* < !-- student login form --> */
+.login-section {
+    padding-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+.login-form {
+    border: 1px solid #594545;
+    width: 40%;
+}
+
+#student-login {
+    color: white;
+    background-color: #594545;
+    font-size: 25px;
+    text-align: center;
+}
+
+#form-section {
+    padding: 20px 70px;
+    font-family: helvetica neue;
+    font-size: 15px;
+    font-weight: bold;
+}
+.form-group{
+    padding: 10px;
+}
+.btn {
+    background-color: #594545;
+    border:none;
+    color: white;
+    margin-top: 20px;
+
+}
+.btn:hover{
+    color: white;
+}
+/* footer */
+.footer {
+    background-color: #594545;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    
+}
