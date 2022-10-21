@@ -4,7 +4,7 @@ body {
 
 /* header */
 .header {
-    background-color: #AC7088;
+    background-color: #827397;
     padding: 20px;
 }
 
@@ -38,13 +38,13 @@ body {
 }
 
 .login-form {
-    border: 1px solid#AC7088;
+    border: 1px solid#827397;
     width: 40%;
 }
 
 #student-login {
     color: white;
-    background-color: #AC7088;
+    background-color: #827397;
     font-size: 25px;
     text-align: center;
 }
@@ -76,7 +76,7 @@ body {
 }
 
 .btn {
-    background-color: #AC7088;
+    background-color: #827397;
 }
 
 input.calendar {
@@ -89,7 +89,7 @@ input.calendar {
 
 /* footer */
 .footer {
-    background-color: #AC7088;
+    background-color: #827397;
     color: white;
     font-size: 20px;
     font-weight: bold;
