@@ -11,10 +11,6 @@ body{
     display: flex;
     justify-content: center;
 }
-#id{
-    height: auto;
-    width: 100px;
-}
 .title{
     color: white;
     font-size: 30px;
@@ -26,7 +22,7 @@ body{
 }
 /* < !-- student login form --> */
 .login-section{
-    padding-top: 50px;
+    padding-top: 70px;
     display: flex;
     justify-content: center;
 }
@@ -46,21 +42,8 @@ body{
     font-size: 15px;
     font-weight: bold;
 }
-#dropdownMenu2 {
-    min-width: 100%;
-    text-align: left;
-}
-.dropdown-menu{
-    width:100%;
-}
-.dropdown-toggle {
-    position: relative;
-}
-
-.dropdown-toggle::after {
-    position: absolute;
-    right: 20px;
-    bottom: 45%;
+.form-select{
+    font-size: 15px;
 }
 .btn{
     background-color:#395B64;

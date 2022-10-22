@@ -35,7 +35,7 @@ body {
 
 #section{
     border: 2px solid #827397;
-    margin: 50px 100px;
+    margin: 50px 150px;
 }
 #heading{
     text-align: center;
@@ -46,29 +46,23 @@ body {
 }
 #form{
     margin: 30px 75px;
-    font-size: 27px;
-    line-height: 60px;
-    
-
+    font-size: 22px;
 }
 .form-select{
-    width: 20%;
+    width: 40%;
     display: inline;
     font-size: 20px;
-    margin: 0 30px;
     
 }
 .btn{
-    display: block;
-    align-items: center;
-    justify-content: center;
-    margin: 30px;
+    margin-top: 20px;
     font-size: 20px;
     font-weight: bold;
-    width: 25%;
+    width: 40%;
     background-color: #827397;
     border: none;
     transition: none;
+    color: white;
 }
 .btn:hover{
     background-color: #827397;
