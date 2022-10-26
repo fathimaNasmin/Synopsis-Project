@@ -29,17 +29,20 @@
             <div id="student-login">Administrator Login</div>
         
             <div id="form-section">
-                <form method="">
+                <form method="POST" action="{{ url_for('admin') }}">
+                    {{ form.hidden_tag() }}
                     <div class="form-group">
                         <label>Admin Id</label>
-                        <input type="" class="form-control" id="exampleInputPassword1">
+                        {{ form.admin_id(class="form-control") }}
+<!--                        <input type="" class="form-control" id="exampleInputPassword1">-->
                     </div>
                     <div class="form-group">
                         <label>Admin Password</label>
-                        <input type="" class="form-control" id="exampleInputPassword1">
+                        {{ form.admin_password(class="form-control") }}
+<!--                        <input type="" class="form-control" id="exampleInputPassword1">-->
                     </div>
-        
-                    <button type="submit" class="btn btn-block">Submit</button>
+                        {{ form.submit(class="btn btn-block")}}
+<!--                    <button type="submit" class="btn btn-block">Submit</button>-->
                 </form>
             </div>
         </div>
@@ -49,7 +52,7 @@
     <footer class="footer">
         <div class="container-fluid">
             <div class="row">
-                <div class="col">XYZ OPEN UNIVERSITY&COPY; COPYRIGHT 2022</div>
+                <div class="col">XYZ OPEN UNIVERSITY&COPY; COPYRIGHT 2022 || Developed by Fathima Nasmin</div>
             </div>
         </div>
 
