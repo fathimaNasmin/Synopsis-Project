@@ -11,70 +11,106 @@
     <link rel="stylesheet" href="static/css/studentloginstyle.css">
 </head>
 <body>
-    <header>
-    <div class="header-style">
-        <div class="row">
-            <div class="col-6 header">
-                <i class="fa-solid fa-user"></i>
-                <span>Username</span>
-            </div>
-            <div class="col-6">
-            <button id="logout">Logout</button>
+
+    <!--    Main body-->
+    <div id="main-body">
+    <!--        sidebar-->
+        <div id="sidebar">
+            <li><i class="fa-regular fa-user"></i><a href="#profile-section">Profile</a></li>
+            <li><i class="fa-regular fa-file"></i><a href="#synopsis-section">Synopsis</a></li>
+            <li><i class="fa-regular fa-message"></i><a href="#message-section">Message</a></li>
+            <li><i class="fa-solid fa-spinner"></i><a href="#status-section">Check Status</a></li>
+            <li><i class="fa-solid fa-right-from-bracket"></i><a href="#logout-section">Logout</a></li>
+        </div>
+    <!--        Main-content-->
+        <div id="main-content">
+            <div id="section">
+                <section id="profile-section">shows the logined student detail from database</section>
+
+                <section id="synopsis-section">
+                    <div id="synopsis-form">
+                        <div id="heading" >
+                            <label id="synopsis-heading">SYNOPSIS SUBMISSION FORM</label>
+                        </div>
+
+                        <form method="POST" action="" id="form" novalidate>
+                            <div>
+                                {{ form.hidden_tag() }}
+                                <label  class="x">Project Category</label>
+                                {{ form.project_category(class="form-select x") }}
+                                {% if form.project_category.errors %}
+                        <ul>
+                        {% for error in form.project_category.errors %}
+                            <li class="error-msg">{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+
+                                <label  class="x">Title of Project</label>
+                                {{ form.title(class="form-control x") }}
+                                {% if form.title.errors %}
+                        <ul>
+                        {% for error in form.title.errors %}
+                            <li class="error-msg">{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+
+                                <label class="x">Guide's Name</label>
+                                {{ form.guide_name(class="form-control x") }}
+                                {% if form.guide_name.errors %}
+                        <ul>
+                        {% for error in form.guide_name.errors %}
+                            <li class="error-msg">{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+
+                                <label class="x">Guide's Qualification</label>
+                                {{ form.guide_qualification(class="form-control x") }}
+                                {% if form.guide_qualification.errors %}
+                        <ul>
+                        {% for error in form.guide_qualification.errors %}
+                            <li class="error-msg">{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+
+                                <label class="x">Year of Work Experience</label>
+                                {{ form.guide_experience(class="form-control x") }}
+                                {% if form.guide_experience.errors %}
+                        <ul>
+                        {% for error in form.guide_experience.errors %}
+                            <li class="error-msg">{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+
+                                <label class="x">Design & Analysis Design Document</label>
+                                {{ form.docs(class="btn") }}
+                                {% if form.docs.errors %}
+                        <ul>
+                        {% for error in form.docs.errors %}
+                            <li class="error-msg">{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+
+                                {{ form.submit(class="btn submit-btn x") }}
+
+
+                            </div>
+                        </form>
+                    </div>
+
+                </section>
+                <section id="message-section">chat application</section>
+                <section id="status-section">Status of Synopsis Submission</section>
+                <section id="logout-section">lorem5</section>
             </div>
         </div>
+
     </div>
-    </header>
 
-    <section class="main-body">
-        <label class="enrol">ENROLLMENT NO : </label><br>
-        <label class="enrol">COURSE :</label>
-        <div id="synopsis-form">
-            <div id="heading" >
-                <label id="synopsis-heading">SYNOPSIS SUBMISSION FORM</label>
-            </div>
-            
-            <form action="" id="form">
-                <div>
-                    {{ form.hidden_tag() }}
-                    <label  class="x">Project Category</label>
-                    {{ form.project_category(class="form-select x") }}
-<!--                    <span><select class="form-select x" aria-label="Default select example">-->
-<!--                        <option selected>Select menu</option>-->
-<!--                        <option value="1">Networking</option>-->
-<!--                        <option value="2">GUI</option>-->
-<!--                        <option value="3">Web Development</option>-->
-<!--                    </select></span>-->
-                    <label class="x">Title of Project</label>
-                    {{ form.title(class="form-control x") }}
-<!--                    <input type="" class="form-control x">-->
-                    <label class="x">Guide's Name</label>
-                    {{ form.guide_name(class="form-control x") }}
-<!--                    <input type="" class="form-control x">-->
-                    <label class="x">Guide's Qualification</label>
-                    {{ form.guide_qualification(class="form-control x") }}
-<!--                    <input type="" class="form-control x">-->
-                    <label class="x">Year of Work Experience</label>
-                    {{ form.guide_experience(class="form-control x") }}
-<!--                    <input type="" class="form-control x">-->
-                    <label class="x">Design & Analysis Design Document</label>
-                    {{ form.docs(class="btn") }}
-<!--                    <button type="" class="btn upload-btn x">Upload</button><br>-->
-                    {{ form.submit(class="btn submit-btn x") }}
-<!--                    <button type="submit" class="btn submit-btn x">Submit</button>-->
-
-                </div>
-            </form>
-        </div>
-    </section>
-    <!-- footer -->
-    <footer class="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-7">XYZ OPEN UNIVERSITY</div>
-                <div class="col-5">&COPY; COPYRIGHT 2022 || Developed by Fathima Nasmin</div>
-            </div>
-        </div>
-    
-    </footer>
 </body>
 </html>

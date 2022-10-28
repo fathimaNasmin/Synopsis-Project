@@ -6,11 +6,7 @@ body{
     background-color: #395B64;
     padding: 20px;
 }
-.logo-div{
-    text-align: center;
-    display: flex;
-    justify-content: center;
-}
+
 .title{
     color: white;
     font-size: 30px;
@@ -20,6 +16,7 @@ body{
 #title-name{
     font-size: 25px;
 }
+
 /* < !-- student login form --> */
 .login-section{
     padding-top: 70px;
@@ -48,12 +45,10 @@ body{
 .btn{
     background-color:#395B64;
 }
-input.calendar{
-    background-image: url(/images/calendar-days-solid.svg);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: 20px;  
-    background-origin: content-box; 
+.error-msg{
+    color:red;
+    list-style:none;
+    font-size:12px;
 }
 /* footer */
 .footer{

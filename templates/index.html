@@ -46,26 +46,29 @@
             <div id="student-login">Student Login</div>
 
             <div id="form-section">
-                <form method="POST" action="{{ url_for('student')}}">
+                <form method="POST" action="{{ url_for('student') }}" novalidate>
                     <div class="form-group">
-<!--                        <label>Select Course</label>-->
-<!--                        <select class="form-select" aria-label="Default select example">-->
-<!--                            <option selected>Select</option>-->
-<!--                            <option value="1">BCA</option>-->
-<!--                            <option value="2">MCA</option>-->
-<!--                            <option value="3">PDGCA</option>-->
-<!--                            <option value="3">Bsc</option>-->
-<!--                        </select>-->
                         {{ form.hidden_tag() }}
                         {{ form.course.label }}
                         {{ form.course(class="form-select") }}
+                        {% if form.course.errors %}
+                        <ul>
+                        {% for error in form.course.errors %}
+                            <li class="error-msg">{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
+
                         {{ form.enrol_id.label }}
                         {{ form.enrol_id(class="form-control") }}
+                        {% if form.enrol_id.errors %}
+                        <ul>
+                        {% for error in form.enrol_id.errors %}
+                            <li class="error-msg">{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
                     </div>
-<!--                    <div class="form-group">-->
-<!--                        <label>Enrollment No.</label>-->
-<!--                        <input type="" class="form-control" id="exampleInputPassword1">-->
-<!--                    </div>-->
                     
                     <button type="submit" class="btn btn-primary btn-block mt-5">Submit</button>
                 </form>
@@ -83,22 +86,6 @@
     </div>
 
    </footer>
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-    crossorigin="anonymous"></script>
-    
-<!-- bootstrap.js -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-    <!-- dropdown bootstrap -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
 
 </body>
 </html>
