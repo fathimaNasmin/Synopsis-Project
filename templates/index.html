@@ -68,6 +68,16 @@
                             {% endfor %}
                         </ul>
                         {% endif %}
+
+                        {{ form.dob.label }}
+                        {{ form.dob(class="form-control") }}
+                        {% if form.dob.errors %}
+                        <ul>
+                        {% for error in form.dob.errors %}
+                            <li class="error-msg">{{ error }}</li>
+                            {% endfor %}
+                        </ul>
+                        {% endif %}
                     </div>
                     
                     <button type="submit" class="btn btn-primary btn-block mt-5">Submit</button>

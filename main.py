@@ -17,14 +17,8 @@ def student():
     return render_template('index.html', year=curr_year, form=student_login)
 
 
-# @app.route('/studentlogin', methods=['GET'])
-# def student_login():
-
-
-
 @app.route('/studentlogin/synopsis', methods=['GET', 'POST'])
 def student_synopsis():
-
     return render_template()
     # return redirect(url_for("student_login")+"#synopsis-section")
 

@@ -2,6 +2,7 @@ body {
     font-family: Times New Roman;
 }
 
+
 /* header */
 .header {
     background-color: #827397;
@@ -85,6 +86,11 @@ input.calendar {
     background-position: right;
     background-size: 20px;
     background-origin: content-box;
+}
+.error-msg{
+    color:red;
+    list-style:none;
+    font-size:12px;
 }
 
 /* footer */

@@ -1,11 +1,12 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SelectField, IntegerField, FileField, SubmitField, PasswordField
+from wtforms import StringField, SelectField, IntegerField, FileField, SubmitField, PasswordField, DateField
 from wtforms.validators import Length, InputRequired, DataRequired
 
 
 class StudentLogin(FlaskForm):
     course = SelectField('Select Course', choices=[('', 'Select'), ('bca', 'BCA'), ('mca', 'MCA'), ('pgdca', 'PGDCA'), ('bsc', 'BSc')], validators=[InputRequired(message="Select the Course")])
     enrol_id = StringField('Enrollment Id', validators=[InputRequired(message="Enter the Enrollment id")])
+    dob = DateField('Date Of Birth',validators=[InputRequired(message="dob required")])
 
 
 class Synopsis(FlaskForm):
@@ -19,8 +20,8 @@ class Synopsis(FlaskForm):
 
 
 class EvaluatorLogin(FlaskForm):
-    login_id = StringField('id', validators=[DataRequired()])
-    password = PasswordField('password', validators=[DataRequired(),Length(min=8)])
+    login_id = StringField('id', validators=[InputRequired(message="Incorrect login id or password")])
+    password = PasswordField('password', validators=[InputRequired(message="Incorrect login id or password"), Length(min=8)])
     submit = SubmitField('Submit')
 
 
