@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, redirect, request
 from forms import StudentLogin, Synopsis, EvaluatorLogin, AdminLogin
 from datetime import date
 
@@ -12,8 +12,21 @@ def student():
     student_login = StudentLogin()
     if student_login.validate_on_submit():
         synopsis_form = Synopsis()
-        return render_template('studentlogin.html', form=synopsis_form)
+        return render_template("studentlogin.html", form=synopsis_form)
+
     return render_template('index.html', year=curr_year, form=student_login)
+
+
+@app.route('/studentlogin/synopsis', methods=['GET', 'POST'])
+def student_synopsis():
+    return render_template()
+    # return redirect(url_for("student_login")+"#synopsis-section")
+
+
+@app.route('/studentlogin/message')
+def std_message():
+    return redirect(url_for("student_login")+"#message-section")
+
 
 
 @app.route('/evaluator', methods=['GET', 'POST'])

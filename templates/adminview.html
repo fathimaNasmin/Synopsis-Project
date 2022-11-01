@@ -13,58 +13,57 @@
 </head>
 
 <body>
-    <header>
-        <div class="header-style">
-            <div class="row">
-                <div class="col-6 header">
-                    <i class="fa-solid fa-user"></i>
-                    <span>Admin Name</span>
-                </div>
-                <div class="col-6">
-                    <button id="logout">Logout</button>
-                </div>
-            </div>
-        </div>
-    </header>
 
-    <section id="table">
-        <form action="">
-        <table class="table table-hover border">
-            <thead class="thead">
-                <tr>
-                    <th scope="col">Enrollment No</th>
-                    <th scope="col">Project Category</th>
-                    <th scope="col">Allocation to Evaluator</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Action</th>
-                    
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>GUI</td>
-                    <td><select class="form-select x" aria-label="Default select example">
-                        <option selected>Evalutors</option>
-                        <option value="1">abc</option>
-                        <option value="2">def</option>
-                        <option value="3">ghi</option>
-                    </select></td>
-                    <td>In Progress</td>
-                    <td><button type="button" class="btn">Assign</button></td>
-                </tr>
-            </tbody>
-        </table>
-        </form>
-    </section>
-    <!-- footer -->
-    <footer class="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col">XYZ OPEN UNIVERSITY&COPY; COPYRIGHT 2022 || Developed by Fathima Nasmin</div>
+    <!--    Main body-->
+    <div id="main-body">
+    <!--        sidebar-->
+        <div id="sidebar">
+            <li><i class="fa-regular fa-user"></i><a href="#profile-section">Profile</a></li>
+            <li><i class="fa-regular fa-file"></i><a href="#table">Evaluation Page</a></li>
+            <li><i class="fa-solid fa-chalkboard-user"></i><a href="#new-evaluator">New Evaluator</a></li>
+            <li><i class="fa-solid fa-right-from-bracket"></i><a href="#logout-section">Logout</a></li>
+        </div>
+    <!--        Main-content-->
+        <div id="main-content">
+            <div id="section">
+                <section id="profile-section">shows the logined student detail from database</section>
+
+                    <section id="table">
+                        <form action="">
+                        <table class="table table-hover border">
+                            <thead class="thead">
+                                <tr>
+                                    <th scope="col">Enrollment No</th>
+                                    <th scope="col">Project Category</th>
+                                    <th scope="col">Allocation to Evaluator</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Action</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>GUI</td>
+                                    <td><select class="form-select x" aria-label="Default select example">
+                                        <option selected>Evalutors</option>
+                                        <option value="1">abc</option>
+                                        <option value="2">def</option>
+                                        <option value="3">ghi</option>
+                                    </select></td>
+                                    <td>In Progress</td>
+                                    <td><button type="button" class="btn">Assign</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </form>
+                    </section>
+
+                <section id="new-evaluator">Add new Evaluator form</section>
+                <section id="logout-section">lorem5</section>
             </div>
         </div>
-    </footer>
+    </div>
 
 
 </body>

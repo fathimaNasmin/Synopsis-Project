@@ -3,47 +3,65 @@ body {
     padding: 0;
     font-family: Times New Roman;
 }
-
-.header-style {
-    background-color: #594545;
-    width: 100%;
-    color: white;
+/* Main-body */
+#main-body{
+    height:100vh;
 }
+/* sidebar */
+#sidebar{
+    background: #3F4E4F;
+    width:20vw;
+    height:100vh;
+    color:#fff;
+    position:fixed;
+    padding-top:30px;
+    overflow: hidden;
 
-.header {
-    font-size: 30px;
-    color: white;
-    padding: 25px;
 }
-
-.header i {
-    padding: 0 10px;
+#sidebar li{
+    list-style:none;
+    line-height:100px;
+    font-size:25px;
+    margin-left:30px;
 }
-
-#logout {
-    background-color: #594545;
-    border: none;
-    color: white;
-    font-size: 30px;
-    float: right;
-    padding: 25px 35px;
+#sidebar li a{
+    text-decoration:none;
+    color:#fff;
 }
-
-#logout:hover {
-    color: #594545;
+#sidebar li a:hover{
+    color:#F5E8C7;
 }
-
+#sidebar li i{
+    margin-right:15px;
+}
+/* Main content */
+#main-content{
+    background-color: #f2e6eb;
+    width:80vw;
+    height:100vh;
+    margin-left:20vw;
+    overflow:hidden;
+}
+#section{
+    width:80vw;
+    height:100vh;
+}
+section{
+    height:100vh;
+    background:#fff;
+    padding:20px 40px;
+}
 #table {
-    margin: 50px 150px;
+    margin: 50px 30px;
 }
 
 .thead {
-    background-color: #594545;
+    background-color: #3F4E4F;
     color: white;
 }
 
 .btn {
-    background-color: #594545;
+    background-color: #a0b6b8;
     color: white;
 }
 .btn:hover{
@@ -52,16 +70,4 @@ body {
 .x{
     width: 40%;
     height: 5%;
-}
-/* footer */
-.footer {
-    background-color: #594545;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-
 }

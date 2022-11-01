@@ -13,63 +13,60 @@
 </head>
 
 <body>
-    <header>
-        <div class="header-style">
-            <div class="row">
-                <div class="col-6 header">
-                    <i class="fa-solid fa-user"></i>
-                    <span>Evaluator Name</span>
-                </div>
-                <div class="col-6">
-                    <button id="logout">Logout</button>
-                </div>
+    <!--    Main body-->
+    <div id="main-body">
+    <!--        sidebar-->
+        <div id="sidebar">
+            <li><i class="fa-regular fa-user"></i><a href="#profile-section">Profile</a></li>
+            <li><i class="fa-regular fa-file"></i><a href="#table">Evaluation Page</a></li>
+            <li><i class="fa-regular fa-message"></i><a href="#message-section">Message</a></li>
+            <li><i class="fa-solid fa-right-from-bracket"></i><a href="#logout-section">Logout</a></li>
+        </div>
+    <!--        Main-content-->
+        <div id="main-content">
+            <div id="section">
+                <section id="profile-section">shows the logined student detail from database</section>
+
+                <section id="table">
+                    <table class="table table-hover border">
+                        <thead class="thead">
+                            <tr>
+                                <th scope="col">Enrollment No</th>
+                                <th scope="col">Project Category</th>
+                                <th scope="col">Project Name</th>
+                                <th scope="col">Details</th>
+                                <th scope="col">Evaluation Status</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>GUI</td>
+                                <td>Name of project</td>
+                                <td><a href="{{ url_for('evaluator_view') }}" class="btn">View</a></td>
+            <!--                    <td><button type="button" class="btn">View</button></td>-->
+                                <td>In Progress</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Web development</td>
+                                <td>Name of project</td>
+                                <td><button type="button" class="btn">View</button></td>
+                                <td>Completed</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+                </section>
+
+                <section id="message-section">chat application</section>
+                <section id="status-section">Status of Synopsis Submission</section>
+                <section id="logout-section">lorem5</section>
             </div>
         </div>
-    </header>
-
-    <section id="table">
-        <table class="table table-hover border">
-            <thead class="thead">
-                <tr>
-                    <th scope="col">Enrollment No</th>
-                    <th scope="col">Project Category</th>
-                    <th scope="col">Project Name</th>
-                    <th scope="col">Details</th>
-                    <th scope="col">Evaluation Status</th>
-
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>GUI</td>
-                    <td>Name of project</td>
-                    <td><a href="{{ url_for('evaluatorview') }}" class="btn">View</a></td>
-<!--                    <td><button type="button" class="btn">View</button></td>-->
-                    <td>In Progress</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Web development</td>
-                    <td>Name of project</td>
-                    <td><button type="button" class="btn">View</button></td>
-                    <td>Completed</td>
-                </tr>
-                
-            </tbody>
-        </table>
-
-    </section>
-    <!-- footer -->
-    <footer class="footer">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-7">XYZ OPEN UNIVERSITY</div>
-                <div class="col-5">&COPY; COPYRIGHT 2022 || Developed by Fathima Nasmin</div>
-            </div>
-        </div>
-    </footer>
-
+    </div>
     
 </body>
 
