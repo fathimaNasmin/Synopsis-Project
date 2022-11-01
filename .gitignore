@@ -1,0 +1,7 @@
+#Ignore Mac system files
+.DS_Store
+
+#python files
+__pycache__
+.idea
+
