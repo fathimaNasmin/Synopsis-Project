@@ -79,7 +79,13 @@
                         </ul>
                         {% endif %}
                     </div>
-                    
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            {% for msg in messages %}
+                                <li class="error-msg">{{ msg }}</li>
+                            {% endfor%}
+                        {% endif %}
+                    {% endwith%}
                     <button type="submit" class="btn btn-primary btn-block mt-5">Submit</button>
                 </form>
             </div>

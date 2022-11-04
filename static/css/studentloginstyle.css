@@ -53,6 +53,35 @@ section{
     background:#E7F6F2;
     padding:20px 40px;
 }
+section #profile-section{
+
+}
+section #profile-details{
+    border:5px solid #fff;
+    float:left;
+    width:65%;
+    height:100%;
+    margin:0px 10px;
+    padding:10px 0px;
+}
+section #profile-details label{
+    font-size:20px;
+    font-weight:bold;
+    margin:20px 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+section #profile-image{
+
+    float:left;
+    width:30%;
+    height:100%;
+}
+section #profile-image img{
+width:90%;
+height:auto;
+padding:20px 30px;
+border:5px solid black;
+}
 /**/
 #title-name{
     font-size: 25px;
